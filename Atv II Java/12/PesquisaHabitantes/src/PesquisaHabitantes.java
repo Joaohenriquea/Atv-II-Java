@@ -21,11 +21,9 @@ public class PesquisaHabitantes {
             sexo = input.next().charAt(0);
             System.out.print("Informe o salário: ");
             salario = input.nextDouble();
-
-            // cálculo da média dos salários
+            
             mediaSalarios += salario;
 
-            // identificação da maior e menor idade
             if (idade > maiorIdade) {
                 maiorIdade = idade;
             }
@@ -33,12 +31,10 @@ public class PesquisaHabitantes {
                 menorIdade = idade;
             }
 
-            // contagem da quantidade de mulheres
             if (sexo == 'F') {
                 qtdMulheres++;
             }
 
-            // identificação da pessoa com menor salário
             if (salario < menorSalario) {
                 menorSalario = salario;
                 idadeMenorSalario = idade;
@@ -48,7 +44,6 @@ public class PesquisaHabitantes {
             qtdPessoas++;
         }
 
-        // cálculo da média dos salários
         if (qtdPessoas > 0) {
             mediaSalarios /= qtdPessoas;
         }
